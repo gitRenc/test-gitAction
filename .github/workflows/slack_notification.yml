@@ -8,12 +8,13 @@ jobs:
     name: Slack Notification
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - name: Checkout
+      uses: actions/checkout@v3.3.0
     - name: Slack Notification
-      uses: rtCamp/action-slack-notify@v2
+      uses: rtCamp/action-slack-notify@v2.2.0
       env:
         SLACK_CHANNEL: ok
-        SLACK_COLOR: "#ff00ff" # or a specific color like 'good' or '#ff00ff'
-        SLACK_TITLE: Post Title
+        SLACK_TITLE: Hore ada PR!
         SLACK_USERNAME: rich Bot
-        SLACK_WEBHOOK: https://hooks.slack.com/services/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
+        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+        #SLACK_WEBHOOK: https://hooks.slack.com/services/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
