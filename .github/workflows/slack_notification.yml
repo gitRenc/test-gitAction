@@ -9,5 +9,5 @@ jobs:
     steps:
       - name: Run Python Script
         env:
-          SLACK_BOT_TOKEN : ${{secret.SLACK_BOT_TOKEN }}
+          SLACK_BOT_TOKEN : ${{ secrets.SLACK_BOT_TOKEN }}
         run: python .github/workflows/python/api.py
