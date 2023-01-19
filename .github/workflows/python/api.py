@@ -17,7 +17,7 @@ headers = {"Authorization": "Bearer {}".format(
 channel_id = "C020XUK58T1"
 data = {
     "channel": "C020XUK58T1",
-    "text": "Hello world :tada:"
+    "text": "Pull Request Notification! :tada::tada::tada:"
 }
 
 
