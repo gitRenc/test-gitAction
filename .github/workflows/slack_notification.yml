@@ -1,0 +1,11 @@
+name: slack Notification on PR
+on:
+  pull_request:
+    branches:
+      - main
+jobs:
+  check-node-version:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dump GitHub context
+        run: echo "$GITHUB_CONTEXT"
