@@ -4,8 +4,16 @@ on:
     branches:
       - main
 jobs:
-  check-node-version:
+ slackNotification:
+    name: Slack Notification
     runs-on: ubuntu-latest
     steps:
-      - name: Dump GitHub context
-        run: echo "$GITHUB_CONTEXT"
+    - uses: actions/checkout@v2
+    - name: Slack Notification
+      uses: rtCamp/action-slack-notify@v2
+      env:
+        SLACK_CHANNEL: ok
+        SLACK_COLOR: "#ff00ff" # or a specific color like 'good' or '#ff00ff'
+        SLACK_TITLE: Post Title
+        SLACK_USERNAME: rich Bot
+        SLACK_WEBHOOK: ${{ https://hooks.slack.com/services/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 }}
