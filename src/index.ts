@@ -15,5 +15,6 @@ const response = await octokit.request('POST /repos/{owner}/{repo}/actions/workf
   })
 
 // should be return 204
-console.log(response.status);
+// console.log(response.status);
+console.log("zzzz");
 
