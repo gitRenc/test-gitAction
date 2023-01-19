@@ -16,4 +16,4 @@ jobs:
         SLACK_COLOR: "#ff00ff" # or a specific color like 'good' or '#ff00ff'
         SLACK_TITLE: Post Title
         SLACK_USERNAME: rich Bot
-        SLACK_WEBHOOK: ${{ https://hooks.slack.com/services/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 }}
+        SLACK_WEBHOOK: https://hooks.slack.com/services/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
