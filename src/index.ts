@@ -4,6 +4,7 @@ import { Octokit } from "octokit";
 const octokit = new Octokit({ 
     auth: `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 ` 
 });
+
 // DATA INFO
 // owner        : git repo owner
 // repo         : git repo
