@@ -10,4 +10,4 @@ jobs:
       - name: Run Python Script
         env:
           SLACK_BOT_TOKEN : ${{secret.SLACK_BOT_TOKEN }}
-        uses: python .github/workflows/python/api.py
+        run: python .github/workflows/python/api.py
