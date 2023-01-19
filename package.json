@@ -1,11 +1,11 @@
 {
   "name": "githubaction",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "start:dev": "npx nodemon"
   },
   "keywords": [],
   "author": "",
@@ -16,5 +16,14 @@
   },
   "dependencies": {
     "octokit": "^2.0.11"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gitRenc/test-gitAction.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gitRenc/test-gitAction/issues"
+  },
+  "homepage": "https://github.com/gitRenc/test-gitAction#readme",
+  "description": ""
 }
