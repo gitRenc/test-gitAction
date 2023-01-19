@@ -1,0 +1,10 @@
+name: nodeCI
+on:
+  push:
+    branches:
+      - main
+jobs:
+  check-node-version:
+    runs-on: ubuntu-latest
+    steps:
+      - run: node --version
