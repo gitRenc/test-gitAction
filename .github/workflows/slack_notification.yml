@@ -1,6 +1,6 @@
 name: slack Notification on PR
 on:
-  workflow_dispatch:
+  pull_request:
     branches:
       - main
 jobs:
@@ -12,5 +12,5 @@ jobs:
       - name: Run Python Script
         env:
           SLACK_BOT_TOKEN : ${{ secrets.SLACK_BOT_TOKEN }}
-        run: python .github/workflows/python/api.py 
+        run: python .github/workflows/python/api.py
         
