@@ -4,17 +4,10 @@ on:
     branches:
       - main
 jobs:
- slackNotification:
-    name: Slack Notification
+  build:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
-      uses: actions/checkout@v3.3.0
-    - name: Slack Notification
-      uses: rtCamp/action-slack-notify@v2.2.0
-      env:
-        SLACK_CHANNEL: ok
-        SLACK_TITLE: Hore ada PR!
-        SLACK_USERNAME: RichBot
-        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-        #SLACK_WEBHOOK: https://hooks.slack.com/services/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
+      - name: Run Python Script
+        env:
+          SLACK_BOT_TOKEN : ${{secret.SLACK_BOT_TOKEN }}
+        uses: python .github/workflows/python/api.py
